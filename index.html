@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#457b9d">
+  <title>To-Do List</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="todo-list-container">
+    <h1 class="todo-list-container__title">To-Do List</h1>
+
+    <div class="form-container">
+      <form class="form">
+        <input
+          class="form__input"
+          type="text"
+          name="add"
+          placeholder="Add a task..."
+          aria-label="Task input"
+        />
+        <button class="form__button" type="submit" aria-label="Add Task">+</button>
+      </form>
+    </div>
+
+    <ul class="todo-list-container__list"></ul>
+  </div>
+
+  <template id="task-template">
+    <li class="task">
+      <input class="task__checkbox" type="checkbox" />
+      <label class="task__label"></label>
+      <button class="edit-button" aria-label="Edit Task">✎</button>
+      <button class="delete-button" aria-label="Delete Task">🗑️</button>
+    </li>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
